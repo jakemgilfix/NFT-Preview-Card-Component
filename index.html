@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- linking google font "Outfit" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- linking tailwind-css cdn for simplicity (obviously not for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind-css custom styling -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            softblue: 'hsl(215, 51%, 70%)',
+            cyan: 'hsl(178, 100%, 50%)',
+            mainbg: 'hsl(217, 54%, 11%)',
+            cardbg: 'hsl(216, 50%, 16%)',
+            blueline: 'hsl(215, 32%, 27%)',
+            customwhite: 'hsl(0, 0%, 100%)',
+          }
+        }
+      }
+    }
+  </script>
+  </head>
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px;
+      text-align: center;
+      color: rgb(100,100,100);
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body class="
+  bg-mainbg
+  flex flex-col justify-center items-center
+  h-screen
+  font-['Outfit']"
+>
+  <!-- card -->
+  <main>
+    <div class="w-[22rem] rounded-xl overflow-hidden shadow-2xl bg-cardbg">
+      <!-- card content -->
+      <div class="w-full p-6 divide-y divide-softblue divide-opacity-20">
+        <!-- card info -->
+        <div class="space-y-4 mb-4">
+          <!-- image -->
+          <div class="relative rounded-lg overflow-hidden group">
+            <img 
+              src="./images/image-equilibrium.jpg"
+              alt="Ethereum"
+              class="w-min rounded-xl"
+            >
+
+            <!-- image overlay -->
+            <div class="
+              absolute inset-0 
+              bg-cyan bg-opacity-50
+              items-center justify-center
+              hidden group-hover:flex
+              group-hover:cursor-pointer"
+            >
+              <img src="./images/icon-view.svg" alt="" />
+            </div>
+          </div>
+        
+          <h1 class="text-[22px] text-customwhite hover:text-cyan font-[600] pt-2">
+            <a href="#">Equilibrium #3429</a>
+          </h1>
+
+          <p class="text-softblue text-[18px] font-[300]">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+
+          <!-- price and time left container -->
+          <div class="flex items-center justify-between">
+            <!-- price -->
+            <div class="flex items-center text-cyan font-[600] space-x-2">
+              <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                <path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" />
+              </svg>
+              <span>0.041 ETH</span>
+            </div>
+
+            <!-- time left -->
+            <div class="flex items-center text-softblue font-[400] space-x-2">
+              <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                <path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/>
+              </svg>
+              <span>3 days left</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- card author -->
+        <div class="flex items-center space-x-4 pt-4">
+          <img
+            src="./images/image-avatar.png"
+            alt="Avatar"
+            class="w-8 h-8 rounded-full border border-customwhite"
+          >
+          <p class="text-softblue font-[400]">
+            Creation of <a href="#" class="text-customwhite hover:text-cyan">Jules Wyvern</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jake Gilfix</a>.
+  </footer>
+</body>
+</html>

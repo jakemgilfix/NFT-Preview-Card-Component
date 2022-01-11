@@ -40,4 +40,4 @@ Users should be able to:
 ## Author
 
 - Website - [@jakemgilfix](https://github.com/jakemgilfix)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/jakemgilfix)
+- Frontend Mentor - [@jakemgilfix](https://www.frontendmentor.io/profile/jakemgilfix)
